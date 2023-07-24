@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+   
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h1>Sign Up</h1>
+                <form action="/signup" method="POST" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="full_name" class="form-label">Full Name:</label>
+                        <input type="text" class="form-control" name="fname" required>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="registration_number" class="form-label">Registration Number:</label>
+                        <input type="text" class="form-control" name="regNo" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email:</label>
+                        <input type="email" class="form-control" name="email" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password:</label>
+                        <input type="password" class="form-control" name="password" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="degree_programme" class="form-label">Degree Programme:</label>
+                        <select class="form-control" name="degree">
+                            <option value="Bsc computer science and engineering">Bsc computer science and engineering
+                            </option>
+                            <option value="Bsc mechanical engineering">Bsc mechanical engineering</option>
+                            <option value="Bsc civil engineering">Bsc civil engineering</option>
+                            <option value="Bsc electrical engineering">Bsc electrical engineering</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="contact_no" class="form-label">Contact No:</label>
+                        <input type="text" class="form-control" name="contact" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="introduction" class="form-label">Introduction:</label>
+                        <textarea class="form-control" name="introduction" required></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="current_gpa" class="form-label">Current GPA:</label>
+                        <input type="text" class="form-control" name="gpa" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="skills" class="form-label">Skills:</label>
+                        <textarea class="form-control" name="skills" required></textarea>
+                    </div>
+                    <div class="mb-3" >
+                        <label for="skills" class="form-label" >Profile Photo:
+                        </label><input type="file" name="profile_photo"></p>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Sign Up</button>
+            </div>
+
+            <div class="col-md-6 d-flex align-items-center justify-content-center">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/img4.webp"
+                    alt="Sample photo" class="profile-picture">
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+
+ <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin-top: 50px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            background-color: #fff;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        .form-control {
+            border-radius: 5px;
+        }
+
+        .btn {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .profile-picture {
+            max-width: 100%;
+            height: 100%;
+            margin-bottom: 20px;
+        }
+    </style>

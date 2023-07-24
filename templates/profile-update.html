@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile Update</title>
+
+</head>
+<body>
+    <div class="container">
+        <h1><u>Profile Update</u></h1>
+        <form action="/profile-update" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="email" value="{{ student_data['email'] }}">
+            <p>Full Name: <input type="text" name="fname" value="{{ student_data['fname'] }}"></p>
+            <p>Registration Number: <input type="text" name="regNo" value="{{ student_data['regNo'] }}"></p>
+            <p>Email: {{ student_data['email'] }}</p>
+            <p>Password: <input type="password" name="password" value="{{ student_data['password'] }}"></p>
+            <p>Degree Programme:
+                <select name="degree">
+                    <option value="Computer Science" {% if student_data['degree'] == 'Computer Science' %}selected{% endif %}>Computer Science</option>
+                    <option value="Information Technology" {% if student_data['degree'] == 'Information Technology' %}selected{% endif %}>Information Technology</option>
+                    <option value="Electrical Engineering" {% if student_data['degree'] == 'Electrical Engineering' %}selected{% endif %}>Electrical Engineering</option>
+                    <option value="Mechanical Engineering" {% if student_data['degree'] == 'Mechanical Engineering' %}selected{% endif %}>Mechanical Engineering</option>
+                </select>
+            </p>            <p>Contact No: <input type="text" name="contact" value="{{ student_data['contact'] }}"></p>
+            <p>Introduction: <textarea name="introduction">{{ student_data['introduction'] }}</textarea></p>
+            <p>Current GPA: <input type="text" name="gpa" value="{{ student_data['gpa'] }}"></p>
+            <p>Skills: <input type="text" name="skills" value="{{ student_data['skills'] }}"></p>
+            <p>Profile Photo:
+            <img src="{{ student_data['profile_photo_url'] }}" alt=" " class="profile-picture">
+            <input type="file" name="profile_photo"></p>
+            </br>
+
+            <button type="submit" onclick="window.location.href='/profile-view?email={{ student_data['email'] }}'">Update</button>
+            </br>            
+            </br>
+
+            <button type="button" onclick="window.location.href='/profile-view?email={{ student_data['email'] }}'">Cancel</button>
+
+        </form>
+    </div>
+</body>
+</html>
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("https://img.freepik.com/free-vector/abstact-hexagon-background-memphis-style_1017-31955.jpg?w=1380&t=st=1688477933~exp=1688478533~hmac=0a8fa7d7e6bbd0a26cdcd7aa0585ebfa8e9ed25f7cd2c1101521b43d066daa32"); 
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;       
+            }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333333;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid black;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+        
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid black;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+        
+        textarea{
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid black;
+            border-radius: 3px;
+            box-sizing: border-box;    
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        
+        button[type="button"] {
+            width: 100%;
+            padding: 10px;
+            background-color: red;
+            color: #ffffff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        
+        button[type="button"]:hover {
+            background-color: #6e1202;
+        }
+    </style>
