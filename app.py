@@ -10,7 +10,7 @@ app = Flask(__name__)
 aws_secret_access_key = ''
 aws_access_key_id     = ''
 app.secret_key = os.urandom(16)
-s3_bucket_name = 'ishini-new-bucket'
+s3_bucket_name = ''
 
 
 s3 = boto3.client('s3', aws_access_key_id=aws_access_key_id, aws_secret_access_key=aws_secret_access_key)
